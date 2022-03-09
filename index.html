@@ -10,32 +10,41 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <title>Shop</title>
+    <title>AOV Shop</title>
     <link
       rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="./assets/font/css/all.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="shortcut icon" href="./assets/img/NLV.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/grid-system.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
   </head>
   <body>
     <div class="app">
       <header class="header">
-        <div class="grid">
-          <nav class="header__navbar">
+        <div class="grid wide">
+          <nav class="header__navbar hide-on-mobile-tablet">
             <ul class="header__navbar-list">
               <li
                 class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate"
               >
-                Vào cửa hàng trên ứng dụng Shop
+                Vào cửa hàng trên ứng dụng F8-Shop
                 <div class="header__qr">
                   <img
                     src="./assets/img/qr_code.png"
@@ -62,11 +71,19 @@
               </li>
               <li class="header__navbar-item no-hover">
                 <span> Kết nối </span>
-                <a href="" class="header__navbar-icon-link">
+                <a
+                  href="https://www.facebook.com/nguyenlevinhbn99/"
+                  target="_blank"
+                  class="header__navbar-icon-link"
+                >
                   <i class="header__navbar-icon fab fa-facebook"></i>
                 </a>
-                <a href="" class="header__navbar-icon-link">
-                  <i class="header__navbar-icon fab fa-instagram"></i>
+                <a
+                  href="https://github.com/VinhNguyenLe"
+                  class="header__navbar-icon-link"
+                  target="_blank"
+                >
+                  <i class="header__navbar-icon fab fa-github"></i>
                 </a>
               </li>
             </ul>
@@ -182,7 +199,10 @@
 
           <!-- Header with search -->
           <div class="header-with-search">
-            <div class="header__logo">
+            <label for="mobile-search-checkbox" class="header__mobile-search">
+              <i class="header__mobile-search-icon fas fa-search"></i>
+            </label>
+            <div class="header__logo hide-on-tablet">
               <div class="header__logo">
                 <a href="/" class="header__logo-link">
                   <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -196,6 +216,14 @@
                 </a>
               </div>
             </div>
+
+            <input
+              type="checkbox"
+              hidden
+              id="mobile-search-checkbox"
+              class="header__search-checkbox"
+            />
+
             <div class="header__search">
               <div class="header__search-input-wrap">
                 <input
@@ -347,40 +375,54 @@
             </div>
           </div>
         </div>
+        <ul class="header__sort-bar">
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Liên quan</a>
+          </li>
+          <li class="header__sort-item header__sort-item--active">
+            <a href="" class="header__sort-link">Mới nhất</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Bán chạy</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Giá</a>
+          </li>
+        </ul>
       </header>
 
       <div class="app__container">
-        <div class="grid">
-          <div class="grid__row app__content">
-            <div class="grid__column-2">
+        <div class="grid wide">
+          <div class="row sm-gutter app__content">
+            <div class="col-2 l-2 m-0 c-0 blo">
               <nav class="category">
-                <h3 class="category__heading">Danh mục</h3>
+                <h3 class="category__heading">Danh mục tướng</h3>
 
                 <ul class="category-list">
                   <li class="category-item category-item--active">
-                    <a href="#" class="category-item__link">Tướng</a>
+                    <a href="#" class="category-item__link">Đỡ đòn</a>
                   </li>
                   <li class="category-item">
-                    <a href="#" class="category-item__link">Trang bị</a>
+                    <a href="#" class="category-item__link">Đấu sĩ</a>
                   </li>
                   <li class="category-item">
-                    <a href="#" class="category-item__link">Trang phục bậc SSS</a>
+                    <a href="#" class="category-item__link">Sát thủ</a>
                   </li>
                   <li class="category-item">
-                    <a href="#" class="category-item__link">Trang phục bậc SS</a>
+                    <a href="#" class="category-item__link">Pháp sư</a>
                   </li>
                   <li class="category-item">
-                    <a href="#" class="category-item__link">Trang phục bậc S</a>
+                    <a href="#" class="category-item__link">Xạ thủ</a>
                   </li>
                   <li class="category-item">
-                    <a href="#" class="category-item__link">Trang phục bậc A</a>
+                    <a href="#" class="category-item__link">Trợ thủ</a>
                   </li>
                 </ul>
               </nav>
             </div>
 
-            <div class="grid__column-10">
-              <div class="home-filter">
+            <div class="col-10 l-10 m-12 c-12">
+              <div class="home-filter hide-on-mobile-tablet">
                 <span class="home-filter__label">Sắp xếp theo</span>
                 <button class="btn home-filter__btn">Phổ biến</button>
                 <button class="btn home-filter__btn btn--primary">
@@ -424,96 +466,78 @@
                 </div>
               </div>
 
-              <div class="home-product">
-                <div class="grid__row">
-                  <!-- 1 -->
-                  <div class="grid__column-2-4">
-                    <!-- Product Item -->
-                    <a class="home-product-item" href="#">
-                      <div
-                        class="home-product-item__img"
-                        style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
-                        "
-                      ></div>
-                      <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
-                      </h4>
-                      <div class="home-product-item__price">
-                        <span class="home-product-item__price-old"
-                          >2150 vàng</span
-                        >
-                        <span class="home-product-item__price-current"
-                          >1800 vàng</span
-                        >
-                      </div>
-                      <div class="home-product-item__action">
-                        <span
-                          class="home-product-item__like home-product-item__like--liked"
-                        >
-                          <i
-                            class="home-product-item__like-icon-empty far fa-heart"
-                          ></i>
-                          <i
-                            class="home-product-item__like-icon-fill fas fa-heart"
-                          ></i>
-                        </span>
-                        <div class="home-product-item__rating">
-                          <i
-                            class="home-product-item__star--gold fas fa-star"
-                          ></i>
-                          <i
-                            class="home-product-item__star--gold fas fa-star"
-                          ></i>
-                          <i
-                            class="home-product-item__star--gold fas fa-star"
-                          ></i>
-                          <i
-                            class="home-product-item__star--gold fas fa-star"
-                          ></i>
-                          <i class="fas fa-star"></i>
-                        </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
-                      </div>
-                      <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
-                      </div>
-                      <div class="home-product-item__favourite">
-                        <i class="fas fa-check"></i>
-                        <span> Yêu thích </span>
-                      </div>
-                      <div class="home-product-item__sale-off">
-                        <span class="home-product-item__sale-off-percent"
-                          >16%</span
-                        >
-                        <span class="home-product-item__sale-off-label"
-                          >GIẢM</span
-                        >
-                      </div>
-                    </a>
-                  </div>
+              <nav class="mobile-category">
+                <ul class="mobile-category__list">
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link"
+                      >Tướng 28888 vàng</a
+                    >
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link"
+                      >Tướng 25888 vàng</a
+                    >
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link"
+                      >Tướng 18888 vàng</a
+                    >
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link"
+                      >Tướng 13888 vàng</a
+                    >
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Tướng 8888 vàng</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Tướng 6888 vàng</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Tướng 5888 vàng</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Tướng 3888 vàng</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Tướng 3088 vàng</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Tướng 1888 vàng</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">Tướng 1088 vàng</a>
+                  </li>
+                  <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link"
+                      >Tướng trả bằng ruby</a
+                    >
+                  </li>
+                </ul>
+              </nav>
 
-                  <div class="grid__column-2-4">
+              <div class="home-product">
+                <div class="row sm-gutter">
+                  <!-- 1 -->
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/3310a88f1a679a6940e2f6e0da287c415a02b6ac709e0.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Superman</b> - Siêu nhân
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >28888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >28888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -542,11 +566,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Đấu sĩ</span>
+                        <span class="home-product-item__origin-name"
+                          >Đường Ceasar</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -554,7 +580,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -562,25 +588,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/b9dd8e24c0fbad107475f6e31f5e36365847d373da15b.png);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Alice</b> - Tiểu thần thiện lương
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -609,11 +634,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Trợ thủ</span>
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -621,7 +648,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -629,25 +656,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/7a32a6089f57696e70046fd280777e9d58b8e3304a500.png);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Payna</b> - Thần rừng hộ mệnh
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -676,11 +702,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Trợ thủ</span>
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -688,7 +716,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -696,25 +724,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/7dba55e7f433ab78ac6bd2cdfeec13495983e12234646.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Murad</b> - Lãng khách thời không
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >18888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >18888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -743,11 +770,11 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Sát thủ</span>
+                        <span class="home-product-item__origin-name">Rừng</span>
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -755,7 +782,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -763,25 +790,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/fd2a04f2b129ef58988f2d311eac83e45b6d0919e7d90.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Ormarr</b> - Cuồng chiến sĩ
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -810,11 +836,15 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand"
+                          >Đấu sĩ, Đỡ đòn</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -822,7 +852,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -830,25 +860,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/3eb3c69cef807c5706a98cc4b799619b5b3456990e650.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Chaugnar</b> - Sứ giả hư vô
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -877,11 +906,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Đỡ đòn</span>
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -889,7 +920,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -897,25 +928,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/e6e08d2cc322676442cf420e4aefb6d85bd7d7620754b.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Richter</b> - Lưỡi gươm diệt quỷ
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >25888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >25888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -944,11 +974,15 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand"
+                          >Đấu sĩ, Sát thủ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ, Đường Ceasar</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -956,7 +990,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -964,25 +998,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/449789489494c0f108a3db5db3098e585bc98d17e666b.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Elsu</b> - Đôi cánh tự do
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >18888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >18888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1011,11 +1044,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Xạ thủ</span>
+                        <span class="home-product-item__origin-name"
+                          >Đường rồng</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1023,7 +1058,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1031,25 +1066,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/6b79035779ab9195c76d91b3f2e7ca79591e685783160.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Raz</b> - Quyền vương
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >18888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >18888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1078,11 +1112,15 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand"
+                          >Pháp sư, Sát thủ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Đường giữa</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1090,7 +1128,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1098,25 +1136,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/71e488144b7dc9f13d40321ce0556efc5847d39f2071a.png);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Thane</b> - Thanh gương anh dũng
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1145,11 +1182,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Đỡ đòn</span>
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1157,7 +1196,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1165,25 +1204,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/44086d0bc26a170b21038a7cbf9413365c4938b95b2f9.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Yorn</b> - Mũi tên mặt trời
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1212,11 +1250,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Xạ thủ</span>
+                        <span class="home-product-item__origin-name"
+                          >Đường rồng</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1224,7 +1264,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1232,25 +1272,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/108ae03944a6aa1eb4313a2baa64efcd5a0e6c1551db1.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Wonder Woman</b> - Chiến thần Amazon
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >25888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >25888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1279,11 +1318,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Đấu sĩ</span>
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ, Đường Ceasar</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1291,7 +1332,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1299,25 +1340,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/f91d8c95b3b0c11c6fe5b8ac20e48cbd5d25650254d57.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Violet</b> - Tay súng quả cảm
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1346,11 +1386,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Xạ thủ</span>
+                        <span class="home-product-item__origin-name"
+                          >Đường rồng</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1358,7 +1400,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1366,25 +1408,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/119dc57d5a3a59b520b93a42301ffb135e7dedbf1c28a.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Lumburr</b> - Khổng lồ lục địa
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1413,11 +1454,15 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand"
+                          >Đỡ đòn, Trợ thủ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1425,7 +1470,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1433,25 +1478,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/17f4f562b9121128b4aff9e7b41644185f041e7796455.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Annette</b> - Nàng phù thủy nhỏ
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1480,11 +1524,15 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand"
+                          >Trợ thủ, Pháp sư</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ, Đường giữa</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1492,7 +1540,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1500,25 +1548,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/07210c9e529faa7766ba324bd86b75165a81722f3eab8.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Tulen</b> - Hoàng tử lôi quang
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >18888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >18888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1547,11 +1594,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Pháp sư</span>
+                        <span class="home-product-item__origin-name"
+                          >Rừng, Đường giữa</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1559,7 +1608,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1567,25 +1616,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/d5166c51f37b444810f2ae3df056920d5c4938c59a482.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Zuka</b> - Đại sư gấu mèo
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >13888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >13888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1614,11 +1662,13 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Sát thủ</span>
+                        <span class="home-product-item__origin-name"
+                          >Đường Ceasar, Rừng</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1626,7 +1676,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1634,25 +1684,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/752c4c954aa4a8f05a1b0be72aa5dc895c0def4d435aa.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Maloch</b> - Ma vương quản ngục
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >18888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >18888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1681,11 +1730,15 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand"
+                          >Đỡ đòn, Đấu sĩ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ, Đường giữa</span
+                        >
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1693,7 +1746,7 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1701,25 +1754,24 @@
                       </div>
                     </a>
                   </div>
-                  <div class="grid__column-2-4">
+                  <div class="col l-2-4 m-4 c-6">
                     <!-- Product Item -->
                     <a class="home-product-item" href="#">
                       <div
                         class="home-product-item__img"
                         style="
-                          background-image: url(https://lienquan.garena.vn/files/items/icon/3cdbf8caaf2dc260fd962f5d31c074c5583eb2abdcb02.png);
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/c7b840bdacd7e5a8b83af72ccd9ca1815ec64fdc5ffeb.jpg);
                         "
                       ></div>
                       <h4 class="home-product-item__name">
-                        Trượng bùng nổ, chiêu thức trúng đích gây nổ trong phạm
-                        vi
+                        <b>Nakroth</b> - Lưỡi đao phán xét
                       </h4>
                       <div class="home-product-item__price">
                         <span class="home-product-item__price-old"
-                          >2150 vàng</span
+                          >18888 vàng</span
                         >
                         <span class="home-product-item__price-current"
-                          >1800 vàng</span
+                          >18888 vàng</span
                         >
                       </div>
                       <div class="home-product-item__action">
@@ -1748,11 +1800,11 @@
                           ></i>
                           <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">86 đã bán</span>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
                       </div>
                       <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">Phép</span>
-                        <span class="home-product-item__origin-name">AOV</span>
+                        <span class="home-product-item__brand">Sát thủ</span>
+                        <span class="home-product-item__origin-name">Rừng</span>
                       </div>
                       <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -1760,7 +1812,767 @@
                       </div>
                       <div class="home-product-item__sale-off">
                         <span class="home-product-item__sale-off-percent"
-                          >16%</span
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/eef053fb25793d536185559e8bf5a82d5c132caaa102e.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Sephera</b> - Thiên mệnh thủy sư
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >13888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >13888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand"
+                          >Trợ thủ, Pháp sư</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ, Đường giữa</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/a56369ce162e24700689527a54d89b755a179e8628f39.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Xeneil</b> - Sứ giả thần thánh
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >13888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >13888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand"
+                          >Đỡ đòn, Trợ thủ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ, Đường Ceasar</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/7f729105a4bc7bb0565f2005d351e7555847d366941a2.png);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Gildur</b> - Vua hoàng kim
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >13888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >13888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand"
+                          >Trợ thủ, Pháp sư</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/2f3fe854b98e664415c024a1e9f0396259d9b9ddb3992.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Ryoma</b> - Kiếm khách tài ba
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >25888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >25888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand"
+                          >Sát thủ, Đấu sĩ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Rừng, Đường Ceasar</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/b1a6c37ad9558ac5767e25ded5b6fcf759966ca7c1d43.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Zill</b> - Ma phong ba
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >13888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >13888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Sát thủ</span>
+                        <span class="home-product-item__origin-name"
+                          >Rừng, Đường giữa</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/04b0a1140d89b8ef0cd4a655753bbb895c4938662bc9f.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Cresht</b> - Chiến binh thủy quái
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >18888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >18888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand"
+                          >Đỡ đòn, Trợ thủ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/28b06811cb721a8ecb28d6a1db401e745a9fd3a39ae40.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Liliana</b> - Cửu vĩ yêu hồ
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >18888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >18888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Pháp sư</span>
+                        <span class="home-product-item__origin-name"
+                          >Đường giữa</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/e751e70db18557783c2d23c9e5383e095b6bb947482b1.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Baldum</b> - Nhân mã thần lực
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >13888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >13888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Đỡ đòn</span>
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/040403525e2882c0e3a6794c31976c89585357ba19a35.png);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Grakk</b> - Kẻ phàm ăn
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >13888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >13888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand"
+                          >Đỡ đòn, Trợ thủ</span
+                        >
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/dab2c45af3206cd0ac30b450357aa8ce5fc5264d71f45.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Lorion</b> - Pháp sư nam châm
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >18888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >18888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Pháp sư</span>
+                        <span class="home-product-item__origin-name"
+                          >Đường giữa, Hỗ trợ</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
+                        >
+                        <span class="home-product-item__sale-off-label"
+                          >GIẢM</span
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col l-2-4 m-4 c-6">
+                    <!-- Product Item -->
+                    <a class="home-product-item" href="#">
+                      <div
+                        class="home-product-item__img"
+                        style="
+                          background-image: url(https://lienquan.garena.vn/files/champion/icon/1303e95b29e784888ae02d97848aed775b2b84e037277.jpg);
+                        "
+                      ></div>
+                      <h4 class="home-product-item__name">
+                        <b>Marja</b> - Oan hồn vực thẳm
+                      </h4>
+                      <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"
+                          >18888 vàng</span
+                        >
+                        <span class="home-product-item__price-current"
+                          >18888 vàng</span
+                        >
+                      </div>
+                      <div class="home-product-item__action">
+                        <span
+                          class="home-product-item__like home-product-item__like--liked"
+                        >
+                          <i
+                            class="home-product-item__like-icon-empty far fa-heart"
+                          ></i>
+                          <i
+                            class="home-product-item__like-icon-fill fas fa-heart"
+                          ></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i
+                            class="home-product-item__star--gold fas fa-star"
+                          ></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">10Tr đã bán</span>
+                      </div>
+                      <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Pháp sư</span>
+                        <span class="home-product-item__origin-name"
+                          >Hỗ trợ, Đường giữa</span
+                        >
+                      </div>
+                      <div class="home-product-item__favourite">
+                        <i class="fas fa-check"></i>
+                        <span> Yêu thích </span>
+                      </div>
+                      <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent"
+                          >0%</span
                         >
                         <span class="home-product-item__sale-off-label"
                           >GIẢM</span
@@ -1812,9 +2624,9 @@
       </div>
 
       <footer class="footer">
-        <div class="grid">
-          <div class="grid__row">
-            <div class="grid__column-2-4">
+        <div class="grid wide footer__content">
+          <div class="row">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Chăm sóc khách hàng</h3>
               <ul class="footer-list">
                 <li class="footer-item">
@@ -1828,7 +2640,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Giới thiệu</h3>
               <ul class="footer-list">
                 <li class="footer-item">
@@ -1842,7 +2654,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Danh mục</h3>
               <ul class="footer-list">
                 <li class="footer-item">
@@ -1856,7 +2668,7 @@
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-4 c-6">
               <h3 class="footer__heading">Theo dõi chúng tôi</h3>
               <ul class="footer-list">
                 <li class="footer-item">
@@ -1866,20 +2678,28 @@
                   </a>
                 </li>
                 <li class="footer-item">
-                  <a href="#" class="footer-item__link">
-                    <i class="fab fa-instagram"></i>
+                  <a
+                    href="https://github.com/VinhNguyenLe"
+                    target="_blank"
+                    class="footer-item__link"
+                  >
+                    <i class="fab fa-github"></i>
                     Instagram
                   </a>
                 </li>
                 <li class="footer-item">
-                  <a href="#" class="footer-item__link">
+                  <a
+                    href="https://www.linkedin.com/in/nguy%E1%BB%85n-l%C3%AA-vinh-728a03228/"
+                    target="_blank"
+                    class="footer-item__link"
+                  >
                     <i class="fab fa-linkedin"></i>
                     Linkedin
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="grid__column-2-4">
+            <div class="col l-2-4 m-8 c-12">
               <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
               <div class="footer__download">
                 <img
@@ -1909,8 +2729,13 @@
         </div>
       </footer>
       <div class="footer__bottom">
-        <!-- <div class="grid__row"> -->
-        <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty</p>
+        <!-- <div class="row"> -->
+        <p class="footer__text">
+          2022 - Giao diện được xây dựng lại bởi
+          <a href="https://www.facebook.com/nguyenlevinhbn99/" target="_blank"
+            >NLV</a
+          >
+        </p>
         <!-- </div> -->
       </div>
     </div>
